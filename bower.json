@@ -1,0 +1,18 @@
+{
+  "name": "capture_pro_landing",
+  "homepage": "https://github.com/goruny4/capture_pro_landing",
+  "authors": [
+    "Alexandr Zmiivets"
+  ],
+  "description": "",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
