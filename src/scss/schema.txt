@@ -1,0 +1,13 @@
+scss								//scss src
+    ├── base
+    │   ├── _fonts.scss             //font rules
+    │   ├── _global.scss            //global rules
+    │   └── _variables.scss         //vars, colors
+    ├── sections					//site sections
+    │   └── top					//top section
+    │       ├── _base.scss		//main styles
+    │       ├── _layout.scss
+    │       ├── _mixins.scss
+    │       └── _partials.scss
+    ├── style.scss				//main init file, all imports
+    └── external				//external libs (bootstrap, resets etc)

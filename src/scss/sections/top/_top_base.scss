@@ -1,0 +1,131 @@
+/***********************************/
+/***** DESKTOP _TOP BEGIN *********/
+/**********************************/
+
+
+/*====================================*/
+
+.top_msg{
+    background: $top_msg_color;
+    height: 28px;
+    width: 100%;
+    font-family: $title_font;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-align: center;
+    padding-top: 12px;
+
+    &_1{
+        color: $top_msg_1_color;
+    }
+
+    &_2{
+        color: $top_msg_2_color;
+    }
+}
+
+/*====================================*/
+
+.top_menu_first{
+    height: 60px;
+    font-family: $content_font;
+    text-transform: capitalize;
+    font-size: 14px;
+    word-spacing: 80px;
+
+    & a:link,
+    & a:active,
+    & a:visited {
+        color: $top_menu_first_color;
+        text-decoration: none;
+    }
+    & a:link:hover{
+        border-bottom: 2px solid $top_menu_first_color;
+    }
+    & ul{
+        padding-top: 23px;
+        float: right;
+
+        & :last-child{
+            word-spacing: 0;
+        }
+    }
+    & ul *{
+        display: inline-block;
+    }
+}
+
+/*====================================*/
+
+.top_menu_second{
+    height: 90px;
+    font-family: $title_font;
+    font-size: 18px;
+    text-transform: capitalize;
+    word-spacing: 100px;
+    letter-spacing: 2px;
+    border-top: solid #d1d1d1 1px;
+    border-bottom: solid #d1d1d1 1px;
+
+    & a:link,
+    & a:active,
+    & a:visited{
+        color: $top_menu_second_color;
+        text-decoration: none;
+    }
+    & a:link:hover{
+        border-bottom: 2px solid $top_menu_second_color;
+    }
+    & ul :last-child{
+        word-spacing: 0;
+    }
+    & ul *{
+        display: inline-block;
+    }
+    &_center{
+        width: 75%;
+        display: inline-block;
+        text-align: right;
+        float: right;
+        padding-top: 40px;
+    }
+    &_logo{
+        padding-top: 15px;
+        display: inline-block;
+    }
+    &_logo img{
+        height: 55px;
+    }
+}
+
+/*********************************/
+/***** DESKTOP _TOP END *********/
+/********************************/
+
+/*************************/
+/*** TABLET _TOP BEGIN ***/
+/*************************/
+
+
+@media only screen
+and (max-width : 800px){
+
+}
+
+
+/*************************/
+/*** TABLET _TOP END   ***/
+/*************************/
+
+/*************************/
+/*** MOBILE _TOP BEGIN ***/
+/*************************/
+
+@media only screen
+and (max-width : 400px){
+
+}
+
+/*************************/
+/*** MOBILE _TOP END   ***/
+/*************************/

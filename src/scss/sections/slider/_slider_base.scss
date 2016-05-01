@@ -1,0 +1,205 @@
+/***********************************/
+/***** DESKTOP _SLIDER BEGIN *******/
+/**********************************/
+
+.slider{
+    // background-color: yellow;
+    height: 880px;
+    & .wrapper{
+        height: 100%;
+    }
+    &_img{
+        display: inline-block;
+        float: left;
+        overflow: hidden;
+        // background-color: green;
+
+        width: 40%;
+        height: inherit;
+        padding: 150px 0 ;
+
+    }
+    &_desc{
+        display: inline-block;
+        float: left;
+        // background-color: blue;
+
+        width: 60%;
+        height: inherit;
+        padding: 150px 100px 0 100px;
+
+        font: 22px $title_font;
+
+        &_first{
+            padding-bottom: 5px;
+
+            letter-spacing: 5px;
+
+            color: $slider_desc_text_color;
+
+            font-size: 55px;
+        }
+        &_second{
+            letter-spacing: 2px;
+        }
+        &_rating{
+            float: right;
+
+            letter-spacing: 2px;
+        }
+        &_text{
+            margin-top: 20px;
+            padding: 60px 0;
+
+            border-top: 1px solid $slider_hr_color;
+
+            font: 16px $content_font;
+            line-height: 27px;
+        }
+        &_buttons *{
+            width: 30%;
+            min-width: 125px;
+            height: 60px;
+
+            vertical-align: bottom;
+            letter-spacing: 3px;
+
+            line-height: 60px;
+        }
+
+        &_buttons{
+            padding-bottom: 70px;
+
+            text-align: right;
+
+            border-bottom: 1px solid $slider_hr_color;
+
+            &_price{
+                float: left;
+
+                text-align: left;
+
+                color: $slider_price_color;
+
+                font-size: 40px;
+            }
+
+            &_add{
+                margin-left: 5px;
+                padding-top: 5px;
+
+                border: 3px solid $slider_price_color;
+                background-color: white;
+
+                font: 22px $title_font;
+
+                &:hover{
+                    color: white;
+                    background-color: $slider_price_color;
+                }
+                &:active{
+                    background-color: $slider_price__active_color;
+                }
+                &:focus{
+                    outline:0;
+                }
+            }
+        }
+        &_share{
+            display: flex;
+
+            padding-top: 25px;
+
+            letter-spacing: 2px;
+
+            color: $slider_selector_color;
+
+            font-size: 19px;
+
+            align-items: center;
+            justify-content: flex-end;
+
+            & :first-child{
+                margin-right: auto;
+            }
+            &_facebook{
+                width: 34px;
+                height: 34px;
+
+                background-image: url('../img/social.png');
+                background-position: right;
+            }
+            &_pinterest{
+                width: 34px;
+                height: 34px;
+
+                background-image: url('../img/social.png');
+                background-position: left;
+            }
+            &_twitter{
+                width: 34px;
+                height: 34px;
+
+                background-image: url('../img/social.png');
+                background-position: top;
+            }
+            &_tumblr{
+                width: 34px;
+                height: 34px;
+
+                background-image: url('../img/social.png');
+                background-position: right top;
+            }
+        }
+    }
+}
+
+.active_star{
+    width: 14px;
+    height: 13px;
+
+    vertical-align: top;
+
+    background-image: url('../img/star_active.png');
+}
+
+.inactive_star{
+    width: 14px;
+    height: 13px;
+
+    vertical-align: top;
+
+    background-image: url('../img/star_inactive.png');
+}
+
+/***********************************/
+/***** DESKTOP _SLIDER END *********/
+/**********************************/
+
+/*************************/
+/*** TABLET _SLIDER BEGIN ***/
+/*************************/
+
+
+@media only screen
+and (max-width : 800px){
+
+}
+
+
+/*************************/
+/*** TABLET _SLIDER END***/
+/*************************/
+
+/*************************/
+/** MOBILE _SLIDER BEGIN**/
+/*************************/
+
+@media only screen
+and (max-width : 400px){
+
+}
+
+/*************************/
+/*** MOBILE _SLIDER END***/
+/*************************/

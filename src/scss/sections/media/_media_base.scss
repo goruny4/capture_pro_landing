@@ -1,0 +1,118 @@
+/***********************************/
+/***** DESKTOP _SLIDER BEGIN *******/
+/**********************************/
+
+.media{
+    height: 550px;
+
+    // background-color: yellow;
+
+    &_video{
+        float: left;
+
+        width: 40%;
+        height: 100%;
+        // background: red;
+
+        background: url(../img/media/a3.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        &:hover{
+            background:
+                linear-gradient(rgba(255, 255, 255, 0.2),
+                                rgba(255, 255, 255, 0.2)),
+                url(../img/media/a3.jpg) no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+    &_img{
+        float: left;
+
+        width: 60%;
+        height: 100%;
+
+        background: green;
+
+        &_top{
+            height: 50%;
+
+            background: red;
+
+            &_1{
+                float: left;
+
+                width: 35%;
+                height: 100%;
+
+                background: blue;
+            }
+            &_2{
+                float: left;
+
+                width: 65%;
+                height: 100%;
+
+                background: gray;
+            }
+        }
+        &_bottom{
+            height: 50%;
+
+            background: yellow;
+
+            &_1{
+                float: left;
+
+                width: 65%;
+                height: 100%;
+
+                background: red;
+            }
+            &_2{
+                float: left;
+
+                width: 35%;
+                height: 100%;
+
+                background: yellow;
+            }
+        }
+    }
+
+
+}
+
+
+/***********************************/
+/***** DESKTOP _SLIDER END *********/
+/**********************************/
+
+/*************************/
+/*** TABLET _SLIDER BEGIN ***/
+/*************************/
+
+
+@media only screen
+and (max-width : 800px){
+
+}
+
+
+/*************************/
+/*** TABLET _SLIDER END***/
+/*************************/
+
+/*************************/
+/** MOBILE _SLIDER BEGIN**/
+/*************************/
+
+@media only screen
+and (max-width : 400px){
+
+}
+
+/*************************/
+/*** MOBILE _SLIDER END***/
+/*************************/

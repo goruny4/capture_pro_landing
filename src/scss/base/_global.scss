@@ -1,0 +1,60 @@
+/************************************/
+/******* DESKTOP _GLOBAL BEGIN ******/
+/************************************/
+
+img{
+    vertical-align: bottom;
+}
+
+div{
+    box-sizing: border-box;
+}
+
+.row *{
+    display: inline-block;
+    // background-color: magenta;
+}
+
+.wrapper{
+    // background: red;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/************************************/
+/******* DESKTOP _GLOBAL END ********/
+/************************************/
+
+/****************************/
+/*** TABLET _GLOBAL BEGIN ***/
+/***************************/
+
+@media only screen
+and (max-width : 1000px){
+    .wrapper{
+        // background: yellow;
+        max-width: 1000px;
+        min-width: 800px;
+    }
+}
+
+/**************************/
+/*** TABLET _GLOBAL END ***/
+/**************************/
+
+/****************************/
+/*** MOBILE _GLOBAL BEGIN ***/
+/****************************/
+
+@media only screen
+and (max-width : 400px){
+    .wrapper{
+        // background: green;
+        min-width: 400px;
+
+    }
+}
+
+/****************************/
+/*** MOBILE _GLOBAL END   ***/
+/****************************/
