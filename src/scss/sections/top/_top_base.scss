@@ -6,14 +6,17 @@
 /*====================================*/
 
 .top_msg{
-    background: $top_msg_color;
-    height: 28px;
     width: 100%;
+    height: 28px;
+    padding-top: 12px;
+
+    text-align: center;
+    letter-spacing: 2px;
+
+    background: $top_msg_color;
+
     font-family: $title_font;
     font-size: 18px;
-    letter-spacing: 2px;
-    text-align: center;
-    padding-top: 12px;
 
     &_1{
         color: $top_msg_1_color;
@@ -28,23 +31,27 @@
 
 .top_menu_first{
     height: 60px;
-    font-family: $content_font;
-    text-transform: capitalize;
-    font-size: 14px;
+
     word-spacing: 80px;
+    text-transform: capitalize;
+
+    font-family: $content_font;
+    font-size: 14px;
 
     & a:link,
     & a:active,
     & a:visited {
-        color: $top_menu_first_color;
         text-decoration: none;
+
+        color: $top_menu_first_color;
     }
     & a:link:hover{
         border-bottom: 2px solid $top_menu_first_color;
     }
     & ul{
-        padding-top: 23px;
         float: right;
+
+        padding-top: 23px;
 
         & :last-child{
             word-spacing: 0;
@@ -59,19 +66,23 @@
 
 .top_menu_second{
     height: 90px;
+
+    letter-spacing: 2px;
+    word-spacing: 100px;
+    text-transform: capitalize;
+
+    border-top: solid $hr_color 1px;
+    border-bottom: solid $hr_color 1px;
+
     font-family: $title_font;
     font-size: 18px;
-    text-transform: capitalize;
-    word-spacing: 100px;
-    letter-spacing: 2px;
-    border-top: solid #d1d1d1 1px;
-    border-bottom: solid #d1d1d1 1px;
 
     & a:link,
     & a:active,
     & a:visited{
-        color: $top_menu_second_color;
         text-decoration: none;
+
+        color: $top_menu_second_color;
     }
     & a:link:hover{
         border-bottom: 2px solid $top_menu_second_color;
@@ -83,15 +94,18 @@
         display: inline-block;
     }
     &_center{
-        width: 75%;
         display: inline-block;
-        text-align: right;
         float: right;
+
+        width: 75%;
         padding-top: 40px;
+
+        text-align: right;
     }
     &_logo{
-        padding-top: 15px;
         display: inline-block;
+
+        padding-top: 15px;
     }
     &_logo img{
         height: 55px;

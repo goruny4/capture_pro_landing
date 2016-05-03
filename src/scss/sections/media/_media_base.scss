@@ -3,7 +3,7 @@
 /**********************************/
 
 .media{
-    height: 550px;
+    height: 560px;
 
     // background-color: yellow;
 
@@ -45,16 +45,22 @@
 
                 width: 35%;
                 height: 100%;
+                // background: blue;
 
-                background: blue;
+                background: url(../img/media/action3.jpg) no-repeat;
+                background-position: center;
+                background-size: cover;
             }
             &_2{
                 float: left;
 
                 width: 65%;
                 height: 100%;
+                // background: gray;
 
-                background: gray;
+                background: url(../img/media/a2.jpg) no-repeat;
+                background-position: center;
+                background-size: cover;
             }
         }
         &_bottom{
@@ -67,16 +73,22 @@
 
                 width: 65%;
                 height: 100%;
+                // background: red;
 
-                background: red;
+                background: url(../img/media/action1.jpg) no-repeat;
+                background-position: center;
+                background-size: cover;
             }
             &_2{
                 float: left;
 
                 width: 35%;
                 height: 100%;
+                // background: yellow;
 
-                background: yellow;
+                background: url(../img/media/action2.jpg) no-repeat;
+                background-position: center;
+                background-size: cover;
             }
         }
     }

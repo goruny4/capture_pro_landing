@@ -1,3 +1,11 @@
+// GLOBAL COLORS
+$hr_color: #d1d1d1; // color for all HR's & BORDERS
+
+$font_main_color: #000;
+
+$inactive_color: #b4b4b4;
+$active_color: #c41735;
+
 // TOP SECTION >> COLORS
 $top_msg_color: #f1f1f1;
 $top_msg_1_color: #cc5c6c;
@@ -15,8 +23,11 @@ $slider_price__active_color: #e01b3c;
 $slider_selector_color: #d4d4d4;
 
 // SLIDER SECTION >> id="color" COLORS
-$dk-color-aux: #c41735;
+$dk-color-aux: #c41735 !default;
 $dk-border-color: #d4d4d4 !default;
 $dk-border-color-aux: #c41735 !default;
 $dk-border-radius: 0 !default;
 $dk-disabled-color: #d4d4d4 !default;
+
+// INFO SECTION >> COLORS
+$info_bg_color: #f0f0f0;

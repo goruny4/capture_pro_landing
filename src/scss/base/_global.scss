@@ -16,9 +16,9 @@ div{
 }
 
 .wrapper{
+    max-width: 1200px;
     // background: red;
     margin: 0 auto;
-    max-width: 1200px;
 }
 
 /************************************/
@@ -32,9 +32,9 @@ div{
 @media only screen
 and (max-width : 1000px){
     .wrapper{
+        min-width: 800px;
         // background: yellow;
         max-width: 1000px;
-        min-width: 800px;
     }
 }
 

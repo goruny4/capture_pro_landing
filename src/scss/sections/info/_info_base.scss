@@ -2,10 +2,73 @@
 /***** DESKTOP _SLIDER BEGIN *******/
 /**********************************/
 
-.info{
-    height: 200px;
+$info_height: 1500px;
+$info_tabs_height: 130px;
 
+.info{
+    height: $info_height;
+
+    background-color: $info_bg_color;
+
+    font-family: $title_font;
+
+    &_tabs{
+        height: $info_tabs_height;
+
+        border-bottom: 1px solid $hr_color;
+        text-align: center;
+
+        & .wrapper{
+            padding-top: 55px;
+
+            & #tab-1,
+            & #tab-2,
+            & #tab-3{
+                display: none;
+            }
+
+            & label{
+                padding: 0 75px;
+                font-size: 18px;
+                cursor: pointer;
+                transition: color .5s;
+                color: $inactive_color;
+            }
+            & label:hover{
+                color: $font_main_color;
+            }
+            & input:checked + label{
+                color: $font_main_color;
+            }
+        }
+
+        &_content{
+            position: relative;
+            top: $info_tabs_height;
+            height: $info_height - $info_tabs_height;
+        }
+
+        &_features,
+        &_specs,
+        &_reviews{
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: opacity .5s
+        }
+
+    }
 }
+
+#tab-1:checked ~ .info_tabs_content .info_tabs_features,
+#tab-2:checked ~ .info_tabs_content .info_tabs_specs,
+#tab-3:checked ~ .info_tabs_content .info_tabs_reviews{
+
+    opacity: 1;
+}
+
+// #tab-1:checked ~ .tabs > div:nth-of-type(1)
 
 /***********************************/
 /***** DESKTOP _SLIDER END *********/

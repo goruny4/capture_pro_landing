@@ -51,7 +51,7 @@
             margin-top: 20px;
             padding: 60px 0;
 
-            border-top: 1px solid $slider_hr_color;
+            border-top: 1px solid $hr_color;
 
             font: 16px $content_font;
             line-height: 27px;
@@ -72,7 +72,7 @@
 
             text-align: right;
 
-            border-bottom: 1px solid $slider_hr_color;
+            border-bottom: 1px solid $hr_color;
 
             &_price{
                 float: left;
