@@ -105,9 +105,7 @@ div {
 /**********************************/
 /*====================================*/
 .top_msg {
-  width: 100%;
-  height: 28px;
-  padding-top: 12px;
+  padding: 7px 0;
   text-align: center;
   letter-spacing: 2px;
   background: #f1f1f1;
@@ -756,55 +754,60 @@ select[data-dkcacheid] {
 }
 
 .info_tabs_content {
-  background-color: #f0f0f0;
   position: relative;
   top: 57px;
-  height: 450px;
+  background-color: #f0f0f0;
+}
+
+.info_tabs_content:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .info_tabs_features, .info_tabs_specs, .info_tabs_reviews {
-  width: 100%;
   display: none;
-  text-align: left;
+  width: 100%;
   padding-top: 130px;
+  text-align: left;
 }
 
-.info_tabs_features_text {
-  float: left;
+.info_tabs_features_desc {
   width: 50%;
-  font-size: 24px;
-  letter-spacing: 2px;
-  padding-right: 200px;
-}
-
-.info_tabs_features_text h3 {
-  color: #b4b4b4;
-  font-size: 20px;
-  padding-top: 35px;
-}
-
-.info_tabs_features_text p {
-  font-family: sans-serif;
-  font-size: 16px;
-  line-height: 26px;
-  padding-top: 25px;
-  letter-spacing: 0;
-}
-
-.info_tabs_features_slider {
-  float: left;
-  width: 50%;
-}
-
-.info_tabs_features_slider img {
-  width: 100%;
-}
-
-.info_tabs_features_description {
-  float: left;
-  width: 100%;
+  height: 100px;
   background: red;
-  padding: 100px 0;
+  float: left;
+  padding-right: 100px;
+}
+
+.info_tabs_features_pic {
+  position: relative;
+  width: 50%;
+  background: green;
+  float: left;
+  margin-bottom: -100px;
+}
+
+.info_tabs_features_pic::after {
+  content: "work with great equipment";
+  position: absolute;
+  right: 0;
+  padding-top: 10px;
+  color: #b4b4b4;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+.info_tabs_features_pic img {
+  width: 100%;
+}
+
+.info_tabs_features_details {
+  width: 100%;
+  height: 500px;
+  background: magenta;
+  float: left;
+  margin-top: 130px;
 }
 
 #tab-1:checked ~ .info_tabs_content .info_tabs_features,

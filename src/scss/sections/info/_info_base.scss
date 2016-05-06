@@ -1,3 +1,11 @@
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
 /***********************************/
 /***** DESKTOP _INFO BEGIN *******/
 /**********************************/
@@ -47,56 +55,59 @@ $info_tabs_height: 130px;
 
 
         &_content{
-            background-color: $info_bg_color;
-
             position: relative;
             top: 57px;
 
-            height: 450px;
+            background-color: $info_bg_color;
+            @include clearfix;
         }
 
         &_features,
         &_specs,
         &_reviews{
-            width: 100%;
             display: none;
-            text-align: left;
+
+            width: 100%;
             padding-top: 130px;
+
+            text-align: left;
         }
         &_features{
-            &_text{
-                float: left;
-                width: 50%;
-                font-size: 24px;
-                letter-spacing: 2px;
-                padding-right: 200px;
 
-                & h3{
-                    color: $inactive_color;
-                    font-size: 20px;
-                    padding-top: 35px;
-                }
-                & p{
-                    font-family: $content_font;
-                    font-size: 16px;
-                    line-height: 26px;
-                    padding-top: 25px;
-                    letter-spacing: 0;
-                }
-            }
-            &_slider{
-                float: left;
+            &_desc{
                 width: 50%;
+                height: 100px;
+                background: red;
+                float: left;
+                padding-right: 100px;
+            }
+            &_pic{
+                position: relative;
+                width: 50%;
+                background: green;
+                float: left;
+                margin-bottom: -100px;
+
+                &::after{
+                    content: "work with great equipment";
+                    position: absolute;
+                    right: 0;
+                    padding-top: 10px;
+                    color: $inactive_color;
+                    letter-spacing: 2px;
+                    font-size: 20px;
+                }
 
                 & img{
                     width: 100%;
                 }
             }
-            &_description{
-                float: left;
+            &_details{
                 width: 100%;
-                background: red;
-                padding: 100px 0;
+                height: 500px;
+                background: magenta;
+                float: left;
+                margin-top: 130px;
             }
         }
     }
