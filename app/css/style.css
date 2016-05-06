@@ -80,7 +80,7 @@ div {
 /***************************/
 @media only screen and (max-width: 1000px) {
   .wrapper {
-    min-width: 800px;
+    min-width: 900px;
     max-width: 1000px;
   }
 }
@@ -717,78 +717,114 @@ select[data-dkcacheid] {
 /*** MOBILE _SLIDER END***/
 /*************************/
 /***********************************/
-/***** DESKTOP _SLIDER BEGIN *******/
+/***** DESKTOP _INFO BEGIN *******/
 /**********************************/
 .info {
   height: 1500px;
-  background-color: #f0f0f0;
   font-family: "AA Bebas Neue";
 }
 
 .info_tabs {
+  position: relative;
   height: 130px;
-  border-bottom: 1px solid #d1d1d1;
-  text-align: center;
-}
-
-.info_tabs .wrapper {
   padding-top: 55px;
+  text-align: center;
+  border-bottom: 1px solid #d1d1d1;
+  background-color: #f0f0f0;
 }
 
-.info_tabs .wrapper #tab-1,
-.info_tabs .wrapper #tab-2,
-.info_tabs .wrapper #tab-3 {
+.info_tabs #tab-1,
+.info_tabs #tab-2,
+.info_tabs #tab-3 {
   display: none;
 }
 
-.info_tabs .wrapper label {
+.info_tabs label {
   padding: 0 75px;
-  font-size: 18px;
   cursor: pointer;
   transition: color .5s;
   color: #b4b4b4;
+  font-size: 18px;
 }
 
-.info_tabs .wrapper label:hover {
+.info_tabs label:hover {
   color: #000;
 }
 
-.info_tabs .wrapper input:checked + label {
+.info_tabs input:checked + label {
   color: #000;
 }
 
 .info_tabs_content {
+  background-color: #f0f0f0;
   position: relative;
-  top: 130px;
-  height: 1370px;
+  top: 57px;
+  height: 450px;
 }
 
 .info_tabs_features, .info_tabs_specs, .info_tabs_reviews {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: opacity .5s;
+  width: 100%;
+  display: none;
+  text-align: left;
+  padding-top: 130px;
+}
+
+.info_tabs_features_text {
+  float: left;
+  width: 50%;
+  font-size: 24px;
+  letter-spacing: 2px;
+  padding-right: 200px;
+}
+
+.info_tabs_features_text h3 {
+  color: #b4b4b4;
+  font-size: 20px;
+  padding-top: 35px;
+}
+
+.info_tabs_features_text p {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  padding-top: 25px;
+  letter-spacing: 0;
+}
+
+.info_tabs_features_slider {
+  float: left;
+  width: 50%;
+}
+
+.info_tabs_features_slider img {
+  width: 100%;
+}
+
+.info_tabs_features_description {
+  float: left;
+  width: 100%;
+  background: red;
+  padding: 100px 0;
 }
 
 #tab-1:checked ~ .info_tabs_content .info_tabs_features,
 #tab-2:checked ~ .info_tabs_content .info_tabs_specs,
 #tab-3:checked ~ .info_tabs_content .info_tabs_reviews {
-  opacity: 1;
+  display: block;
 }
 
 /***********************************/
-/***** DESKTOP _SLIDER END *********/
+/***** DESKTOP _INFO END *********/
 /**********************************/
 /*************************/
-/*** TABLET _SLIDER BEGIN ***/
+/*** TABLET _INFO BEGIN ***/
 /*************************/
 /*************************/
-/*** TABLET _SLIDER END***/
+/*** TABLET _INFO END***/
 /*************************/
 /*************************/
-/** MOBILE _SLIDER BEGIN**/
+/** MOBILE _INFO BEGIN**/
 /*************************/
 /*************************/
-/*** MOBILE _SLIDER END***/
+/*** MOBILE _INFO END***/
 /*************************/
