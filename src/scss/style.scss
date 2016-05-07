@@ -1,21 +1,21 @@
 // EXTERNAL
 @import "external/reset";
 
+
 // BASE
 @import "base/global";
 @import "base/fonts";
 @import "base/variables";
 
 
-
 // SECTION >>> _TOP
 @import "sections/top/top_base";
-
 
 
 // SECTION >>> _SLIDER
 @import "sections/slider/slider_base";
 @import "external/dropkick";
+
 
 // SECTION >>> _MEDIA
 @import "sections/media/media_base";
@@ -23,3 +23,7 @@
 
 // SECTION >>> _INFO
 @import "sections/info/info_base";
+
+
+// SECTION >>> _PRODUCTS
+@import "sections/products/products_base";

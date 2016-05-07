@@ -1,3 +1,12 @@
+@mixin clearfix {
+    &:after {
+        content: "o_________o";
+        display: table;
+        clear: both;
+    }
+}
+
+
 /***********************************/
 /***** DESKTOP _INFO BEGIN *******/
 /**********************************/
@@ -6,7 +15,7 @@ $info_height: 1500px;
 $info_tabs_height: 130px;
 
 .info{
-    height: $info_height;
+    // height: $info_height;
 
     font-family: $title_font;
     border-bottom: 1px solid $hr_color;
@@ -49,10 +58,13 @@ $info_tabs_height: 130px;
 
 
         &_content{
-            position: relative;
-            top: 57px;
+            @include clearfix;
+
+            // position: relative;
+            // top: 57px;
 
             background-color: $info_bg_color;
+
         }
 
         &_features,
@@ -66,6 +78,8 @@ $info_tabs_height: 130px;
             text-align: left;
         }
         &_features{
+
+            // height: $info_height - $info_tabs_height;
             font-size: 0;
 
             & .wrapper{
@@ -98,7 +112,7 @@ $info_tabs_height: 130px;
 
                     font-family: $content_font;
                     font-size: 16px;
-                    line-height: 24px;
+                    line-height: 30px;
 
                 }
             }
@@ -135,7 +149,7 @@ $info_tabs_height: 130px;
                 background: white;
 
                 & .wrapper{
-                    padding-top: 130px;
+                    padding-top: 50px + 130px;
                     display: flex;
                     justify-content: space-between;
                 }

@@ -718,7 +718,6 @@ select[data-dkcacheid] {
 /***** DESKTOP _INFO BEGIN *******/
 /**********************************/
 .info {
-  height: 1500px;
   font-family: "AA Bebas Neue";
   border-bottom: 1px solid #d1d1d1;
 }
@@ -756,9 +755,13 @@ select[data-dkcacheid] {
 }
 
 .info_tabs_content {
-  position: relative;
-  top: 57px;
   background-color: #f0f0f0;
+}
+
+.info_tabs_content:after {
+  content: "o_________o";
+  display: table;
+  clear: both;
 }
 
 .info_tabs_features, .info_tabs_specs, .info_tabs_reviews {
@@ -799,7 +802,7 @@ select[data-dkcacheid] {
   letter-spacing: 0;
   font-family: Lato, sans-serif;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 30px;
 }
 
 .info_tabs_features_pic {
@@ -830,7 +833,7 @@ select[data-dkcacheid] {
 }
 
 .info_tabs_features_details .wrapper {
-  padding-top: 130px;
+  padding-top: 180px;
   display: flex;
   justify-content: space-between;
 }
@@ -931,4 +934,27 @@ select[data-dkcacheid] {
 /*************************/
 /*************************/
 /*** MOBILE _INFO END***/
+/*************************/
+/***********************************/
+/***** DESKTOP _PRODUCTS BEGIN *******/
+/**********************************/
+.products {
+  height: 100px;
+  background: red;
+}
+
+/***********************************/
+/***** DESKTOP _PRODUCTS END *********/
+/**********************************/
+/*************************/
+/*** TABLET _PRODUCTS BEGIN ***/
+/*************************/
+/*************************/
+/*** TABLET _PRODUCTS END***/
+/*************************/
+/*************************/
+/** MOBILE _PRODUCTS BEGIN**/
+/*************************/
+/*************************/
+/*** MOBILE _PRODUCTS END***/
 /*************************/
