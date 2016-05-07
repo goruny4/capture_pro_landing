@@ -1,11 +1,3 @@
-@mixin clearfix {
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-}
-
 /***********************************/
 /***** DESKTOP _INFO BEGIN *******/
 /**********************************/
@@ -17,6 +9,7 @@ $info_tabs_height: 130px;
     height: $info_height;
 
     font-family: $title_font;
+    border-bottom: 1px solid $hr_color;
 
     &_tabs{
         position: relative;
@@ -41,6 +34,7 @@ $info_tabs_height: 130px;
 
             cursor: pointer;
             transition: color .5s;
+            letter-spacing: 2px;
 
             color: $inactive_color;
 
@@ -59,7 +53,6 @@ $info_tabs_height: 130px;
             top: 57px;
 
             background-color: $info_bg_color;
-            @include clearfix;
         }
 
         &_features,
@@ -73,28 +66,62 @@ $info_tabs_height: 130px;
             text-align: left;
         }
         &_features{
+            font-size: 0;
+
+            & .wrapper{
+                margin-bottom: -50px;
+            }
 
             &_desc{
+                display: inline-block;
+
                 width: 50%;
-                height: 100px;
-                background: red;
-                float: left;
                 padding-right: 100px;
+
+                vertical-align: top;
+                letter-spacing: 2px;
+
+                & h3{
+                    padding-bottom: 40px;
+
+                    font-size: 24px;
+                }
+                & h4{
+                    padding-bottom: 30px;
+
+                    color: $inactive_color;
+
+                    font-size: 20px;
+                }
+                & p{
+                    letter-spacing: 0;
+
+                    font-family: $content_font;
+                    font-size: 16px;
+                    line-height: 24px;
+
+                }
             }
             &_pic{
                 position: relative;
+
+                display: inline-block;
+
                 width: 50%;
-                background: green;
-                float: left;
                 margin-bottom: -100px;
 
+                background: green;
+
                 &::after{
-                    content: "work with great equipment";
                     position: absolute;
                     right: 0;
-                    padding-top: 10px;
-                    color: $inactive_color;
+                    bottom: -25px;
+
+                    content: "work with great equipment";
                     letter-spacing: 2px;
+
+                    color: $inactive_color;
+
                     font-size: 20px;
                 }
 
@@ -104,10 +131,106 @@ $info_tabs_height: 130px;
             }
             &_details{
                 width: 100%;
-                height: 500px;
-                background: magenta;
-                float: left;
-                margin-top: 130px;
+
+                background: white;
+
+                & .wrapper{
+                    padding-top: 130px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                &_1{
+                    display: inline-block;
+
+                    width: 25%;
+                    // background: yellow;
+
+                    vertical-align: top;
+
+                    & h2{
+                        padding-bottom: 25px;
+
+                        letter-spacing: 2px;
+
+                        font-size: 22px;
+                    }
+                    & h3{
+                        letter-spacing: 2px;
+
+                        color: $inactive_color;
+
+                        font-family: $title_font;
+                        font-size: 20px;
+                    }
+                    & div{
+                        padding-bottom: 50px;
+
+                        font-family: $content_font;
+                        font-size: 16px;
+                        line-height: 30px;
+                    }
+                }
+                &_2{
+                    display: inline-block;
+
+                    width: 25%;
+
+                    // background: green;
+
+                    & h2{
+                        padding-bottom: 25px;
+
+                        letter-spacing: 2px;
+
+                        font-size: 22px;
+                    }
+                    & h3{
+                        letter-spacing: 2px;
+
+                        color: $inactive_color;
+
+                        font-family: $title_font;
+                        font-size: 20px;
+                    }
+                    & div{
+                        padding-bottom: 50px;
+
+                        font-family: $content_font;
+                        font-size: 16px;
+                        line-height: 30px;
+                    }
+                }
+                &_3{
+                    display: inline-block;
+
+                    width: 25%;
+
+                    // background: yellow;
+
+                    & h2{
+                        padding-bottom: 25px;
+
+                        letter-spacing: 2px;
+
+                        font-size: 22px;
+                    }
+                    & h3{
+                        letter-spacing: 2px;
+
+                        color: $inactive_color;
+
+                        font-family: $title_font;
+                        font-size: 20px;
+                    }
+                    & div{
+                        padding-bottom: 50px;
+
+                        font-family: $content_font;
+                        font-size: 16px;
+                        line-height: 30px;
+                    }
+                }
             }
         }
     }
