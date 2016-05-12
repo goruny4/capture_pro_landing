@@ -52,17 +52,68 @@ table {
   border-spacing: 0;
 }
 
-/************************************/
-/******* DESKTOP _GLOBAL BEGIN ******/
-/************************************/
+body {
+  -webkit-animation: fadein 2s;
+  /* Safari and Chrome */
+  -moz-animation: fadein 2s;
+  /* Firefox */
+  -o-animation: fadein 2s;
+  /* Opera */
+  animation: fadein 2s;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+}
+
 img {
   vertical-align: bottom;
 }
 
-div {
+div, header, footer {
   box-sizing: border-box;
 }
 
+@-moz-keyframes fadein {
+  /* Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadein {
+  /* Opera */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/************************************/
+/******* DESKTOP _GLOBAL BEGIN ******/
+/************************************/
 .row * {
   display: inline-block;
 }
@@ -310,7 +361,7 @@ div {
 }
 
 .slider_desc_buttons_add:focus {
-  outline: 0;
+  outline: none;
 }
 
 .slider_desc_share {
@@ -718,13 +769,12 @@ select[data-dkcacheid] {
 /***** DESKTOP _INFO BEGIN *******/
 /**********************************/
 .info {
+  padding-bottom: 50px;
   font-family: "AA Bebas Neue";
-  border-bottom: 1px solid #d1d1d1;
 }
 
 .info_tabs {
   position: relative;
-  height: 130px;
   padding-top: 55px;
   text-align: center;
   border-bottom: 1px solid #d1d1d1;
@@ -754,20 +804,24 @@ select[data-dkcacheid] {
   color: #000;
 }
 
-.info_tabs_content {
-  background-color: #f0f0f0;
+.info_tabs hr {
+  width: 100%;
+  height: 1px;
+  margin-top: 50px;
+  color: #d1d1d1;
+  border: none;
+  background-color: #d1d1d1;
 }
 
-.info_tabs_content:after {
-  content: "o_________o";
-  display: table;
-  clear: both;
+.info_tabs_content {
+  position: relative;
+  background-color: #f0f0f0;
 }
 
 .info_tabs_features, .info_tabs_specs, .info_tabs_reviews {
   display: none;
   width: 100%;
-  padding-top: 130px;
+  padding-top: 70px;
   text-align: left;
 }
 
@@ -833,8 +887,8 @@ select[data-dkcacheid] {
 }
 
 .info_tabs_features_details .wrapper {
-  padding-top: 180px;
   display: flex;
+  padding-top: 180px;
   justify-content: space-between;
 }
 
@@ -938,9 +992,96 @@ select[data-dkcacheid] {
 /***********************************/
 /***** DESKTOP _PRODUCTS BEGIN *******/
 /**********************************/
+.products > * {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: 25%;
+  height: 560px;
+  transition: background 0.5s;
+  border: 1px solid #d1d1d1;
+  border-left: 0;
+}
+
+.products > *:hover {
+  background: #b4b4b4;
+}
+
 .products {
-  height: 100px;
-  background: red;
+  width: 100%;
+  font-size: 0;
+}
+
+.products img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 125px;
+  left: 0;
+  width: 50%;
+  margin: auto;
+}
+
+.products_item1, .products_item2, .products_item3, .products_item4 {
+  position: relative;
+}
+
+.products_item1 p, .products_item2 p, .products_item3 p, .products_item4 p {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 125px;
+  text-align: center;
+  font-family: "AA Bebas Neue";
+  font-size: 24px;
+  letter-spacing: 2px;
+  line-height: 30px;
+}
+
+.products_item1 p span, .products_item2 p span, .products_item3 p span, .products_item4 p span {
+  display: block;
+  width: 100%;
+  color: #c41735;
+}
+
+.products_item1:hover .products_active,
+.products_item2:hover .products_active,
+.products_item3:hover .products_active,
+.products_item4:hover .products_active {
+  margin-top: 0;
+  transition: margin 0.3s;
+}
+
+.products_active {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-top: 400px;
+}
+
+.products_active button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 12%;
+  margin: auto;
+  cursor: pointer;
+  color: white;
+  border: 0;
+  background: #c41735;
+  font-family: "AA Bebas Neue";
+  font-size: 22px;
+}
+
+.products_active button:active {
+  background: #e01b3c;
+}
+
+.products_active button:focus {
+  outline: none;
 }
 
 /***********************************/
@@ -957,4 +1098,118 @@ select[data-dkcacheid] {
 /*************************/
 /*************************/
 /*** MOBILE _PRODUCTS END***/
+/*************************/
+/***********************************/
+/***** DESKTOP _FOOTER BEGIN *******/
+/**********************************/
+.footer > * {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.footer {
+  height: 520px;
+  padding: 120px 100px 0 100px;
+  background: #000;
+  font-size: 0;
+}
+
+.footer a:link,
+.footer a:active,
+.footer a:visited {
+  text-decoration: none;
+  color: #666666;
+}
+
+.footer a:hover {
+  color: #c41735;
+}
+
+.footer_logo {
+  width: 20%;
+}
+
+.footer_logo img {
+  width: 50%;
+}
+
+.footer_legal {
+  font-size: 26px;
+  font-family: "AA Bebas Neue";
+  letter-spacing: 2px;
+  color: white;
+  width: 20%;
+}
+
+.footer_legal ul {
+  font-size: 24px;
+  color: #666666;
+  padding-top: 60px;
+  line-height: 40px;
+}
+
+.footer_help {
+  font-size: 26px;
+  font-family: "AA Bebas Neue";
+  letter-spacing: 2px;
+  color: white;
+  width: 20%;
+}
+
+.footer_help ul {
+  font-size: 24px;
+  color: #666666;
+  padding-top: 60px;
+  line-height: 40px;
+}
+
+.footer_social {
+  font-size: 26px;
+  font-family: "AA Bebas Neue";
+  letter-spacing: 2px;
+  color: white;
+  width: 20%;
+}
+
+.footer_social ul {
+  font-size: 24px;
+  color: #666666;
+  padding-top: 60px;
+  line-height: 40px;
+}
+
+.footer_forms {
+  font-size: 26px;
+  font-family: "AA Bebas Neue";
+  letter-spacing: 2px;
+  color: white;
+  width: 30%;
+}
+
+.footer_forms ul {
+  font-size: 24px;
+  color: #666666;
+  padding-top: 60px;
+  line-height: 40px;
+}
+
+.footer_copyring {
+  width: 100%;
+  height: 90px;
+}
+
+/***********************************/
+/***** DESKTOP _FOOTER END *********/
+/**********************************/
+/*************************/
+/*** TABLET _FOOTER BEGIN ***/
+/*************************/
+/*************************/
+/*** TABLET _FOOTER END***/
+/*************************/
+/*************************/
+/** MOBILE _FOOTER BEGIN**/
+/*************************/
+/*************************/
+/*** MOBILE _FOOTER END***/
 /*************************/

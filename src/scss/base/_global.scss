@@ -2,24 +2,71 @@ $desktop_width: 1200px;
 $tablet_width: 1000px;
 $mobile_width: 400px;
 
-@mixin inline_hack {
-    display: inline-block;
-    font-size: 0;
-    // vertical-align: bottom;
-    // margin: 0 -1px;
+@mixin clearfix {
+    &:after {
+        display: table;
+        clear: both;
+
+        content: "";
+    }
 }
 
-/************************************/
-/******* DESKTOP _GLOBAL BEGIN ******/
-/************************************/
+body{
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -moz-animation: fadein 2s; /* Firefox */
+    -o-animation: fadein 2s; /* Opera */
+    animation: fadein 2s;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+}
 
 img{
     vertical-align: bottom;
 }
 
-div{
-    box-sizing: border-box;
+div, header, footer{
+    box-sizing:border-box;
 }
+
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+
+/************************************/
+/******* DESKTOP _GLOBAL BEGIN ******/
+/************************************/
 
 .row *{
     display: inline-block;

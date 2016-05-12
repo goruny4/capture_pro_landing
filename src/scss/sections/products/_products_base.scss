@@ -2,9 +2,112 @@
 /***** DESKTOP _PRODUCTS BEGIN *******/
 /**********************************/
 
+.products > *{
+    position: relative;
+
+    display: inline-block;
+    overflow: hidden;
+
+    width: 25%;
+    height: 560px;
+
+    transition: background 0.5s;
+
+    border: 1px solid $hr_color;
+    border-left: 0;
+
+
+    &:hover{
+        background: $inactive_color;
+    }
+
+}
+
 .products{
-    height: 100px;
-    background: red;
+    width: 100%;
+    
+    font-size: 0;
+
+    & img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 125px;
+        left: 0;
+
+        width: 50%;
+        margin: auto;
+    }
+
+    &_item1,
+    &_item2,
+    &_item3,
+    &_item4{
+        position: relative;
+
+        & p{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding-bottom: 125px;
+            text-align: center;
+
+            font-family: $title_font;
+            font-size: 24px;
+            letter-spacing: 2px;
+            line-height: 30px;
+            & span{
+                display: block;
+                width: 100%;
+                color: $active_color;
+            }
+        }
+    }
+
+    &_item1:hover .products_active,
+    &_item2:hover .products_active,
+    &_item3:hover .products_active,
+    &_item4:hover .products_active{
+        margin-top: 0;
+
+        transition: margin 0.3s;
+    }
+
+    &_active{
+        position: relative;
+
+        width: 100%;
+        height: 100%;
+        margin-top: 400px;
+
+        & button{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            width: 50%;
+            height: 12%;
+            margin: auto;
+
+            cursor: pointer;
+
+            color: white;
+            border: 0;
+            background: $active_color;
+
+            font-family: $title_font;
+            font-size: 22px;
+
+            &:active{
+                background: $active_click_color;
+            }
+            &:focus{
+                outline: none;
+            }
+        }
+    }
 }
 
 /***********************************/

@@ -5,6 +5,7 @@ $font_main_color: #000;
 
 $inactive_color: #b4b4b4;
 $active_color: #c41735;
+$active_click_color: #e01b3c;
 
 // TOP SECTION >> COLORS
 $top_msg_color: #f1f1f1;
@@ -18,8 +19,6 @@ $top_menu_second_color: #000;
 // SLIDER SECTION >> COLORS
 $slider_hr_color: #f0f0f0;
 $slider_desc_text_color: #413738;
-$slider_price_color: #c41735;
-$slider_price__active_color: #e01b3c;
 $slider_selector_color: #d4d4d4;
 
 // SLIDER SECTION >> id="color" COLORS
@@ -31,3 +30,7 @@ $dk-disabled-color: #d4d4d4 !default;
 
 // INFO SECTION >> COLORS
 $info_bg_color: #f0f0f0;
+
+// FOOTER SECTION >> COLORS
+
+$footer_menu_color: #666666;
