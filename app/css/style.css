@@ -55,9 +55,7 @@ table {
 body {
   -webkit-animation: fadein 2s;
   /* Safari and Chrome */
-  -moz-animation: fadein 2s;
   /* Firefox */
-  -o-animation: fadein 2s;
   /* Opera */
   animation: fadein 2s;
   -webkit-font-smoothing: antialiased;
@@ -68,32 +66,14 @@ img {
   vertical-align: bottom;
 }
 
-div, header, footer {
+div, header, footer, input {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-@-moz-keyframes fadein {
-  /* Firefox */
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 @-webkit-keyframes fadein {
   /* Safari and Chrome */
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@-o-keyframes fadein {
-  /* Opera */
   from {
     opacity: 0;
   }
@@ -365,12 +345,21 @@ div, header, footer {
 }
 
 .slider_desc_share {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   padding-top: 25px;
   letter-spacing: 2px;
   color: #d4d4d4;
   font-size: 19px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
 }
 
@@ -466,9 +455,9 @@ div, header, footer {
   position: relative;
   background-color: white;
   border: 3px solid #d4d4d4;
+  -webkit-border-radius: 0;
   border-radius: 0;
   text-align: center;
-  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
 }
 
@@ -501,12 +490,14 @@ div, header, footer {
 }
 
 .dk-select-open-up .dk-select-options {
+  -webkit-border-radius: 0 0 0 0;
   border-radius: 0 0 0 0;
   margin-bottom: -1px;
   bottom: 100%;
 }
 
 .dk-select-open-down .dk-select-options {
+  -webkit-border-radius: 0 0 0 0;
   border-radius: 0 0 0 0;
   margin-top: -1px;
   top: 100%;
@@ -520,6 +511,7 @@ div, header, footer {
   background-color: white;
   border: 3px solid #d4d4d4;
   border-top: 0;
+  -webkit-border-radius: 0;
   border-radius: 0;
   list-style: none;
   margin: 0;
@@ -602,13 +594,17 @@ div, header, footer {
 }
 
 .dk-select-open-up .dk-selected {
+  -webkit-border-top-left-radius: 0;
   border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
   border-top-right-radius: 0;
   border-color: #c41735;
 }
 
 .dk-select-open-down .dk-selected {
+  -webkit-border-bottom-left-radius: 0;
   border-bottom-left-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
   border-bottom-right-radius: 0;
   border-color: #c41735;
 }
@@ -692,6 +688,8 @@ select[data-dkcacheid] {
 }
 
 .media_video:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0.2))), url(../img/media/a3.jpg) no-repeat;
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(../img/media/a3.jpg) no-repeat;
   background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(../img/media/a3.jpg) no-repeat;
   background-position: center;
   background-size: cover;
@@ -790,6 +788,7 @@ select[data-dkcacheid] {
 .info_tabs label {
   padding: 0 75px;
   cursor: pointer;
+  -webkit-transition: color .5s;
   transition: color .5s;
   letter-spacing: 2px;
   color: #b4b4b4;
@@ -887,8 +886,14 @@ select[data-dkcacheid] {
 }
 
 .info_tabs_features_details .wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   padding-top: 180px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -998,6 +1003,7 @@ select[data-dkcacheid] {
   overflow: hidden;
   width: 25%;
   height: 560px;
+  -webkit-transition: background 0.5s;
   transition: background 0.5s;
   border: 1px solid #d1d1d1;
   border-left: 0;
@@ -1020,6 +1026,8 @@ select[data-dkcacheid] {
   left: 0;
   width: 50%;
   margin: auto;
+  -webkit-transition: width .5s;
+  transition: width .5s;
 }
 
 .products_item1, .products_item2, .products_item3, .products_item4 {
@@ -1044,11 +1052,21 @@ select[data-dkcacheid] {
   color: #c41735;
 }
 
+.products_item1:hover > img,
+.products_item2:hover > img,
+.products_item3:hover > img,
+.products_item4:hover > img {
+  width: 60%;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+}
+
 .products_item1:hover .products_active,
 .products_item2:hover .products_active,
 .products_item3:hover .products_active,
 .products_item4:hover .products_active {
   margin-top: 0;
+  -webkit-transition: margin 0.3s;
   transition: margin 0.3s;
 }
 
@@ -1057,6 +1075,7 @@ select[data-dkcacheid] {
   width: 100%;
   height: 100%;
   margin-top: 400px;
+  background: transparent;
 }
 
 .products_active button {
@@ -1108,7 +1127,6 @@ select[data-dkcacheid] {
 }
 
 .footer {
-  height: 520px;
   padding: 120px 100px 0 100px;
   background: #000;
   font-size: 0;
@@ -1134,68 +1152,134 @@ select[data-dkcacheid] {
 }
 
 .footer_legal {
-  font-size: 26px;
-  font-family: "AA Bebas Neue";
+  width: 15%;
   letter-spacing: 2px;
   color: white;
-  width: 20%;
+  font-family: "AA Bebas Neue";
+  font-size: 26px;
 }
 
 .footer_legal ul {
-  font-size: 24px;
-  color: #666666;
   padding-top: 60px;
+  color: #666666;
+  font-size: 24px;
   line-height: 40px;
 }
 
 .footer_help {
-  font-size: 26px;
-  font-family: "AA Bebas Neue";
+  width: 15%;
   letter-spacing: 2px;
   color: white;
-  width: 20%;
+  font-family: "AA Bebas Neue";
+  font-size: 26px;
 }
 
 .footer_help ul {
-  font-size: 24px;
-  color: #666666;
   padding-top: 60px;
+  color: #666666;
+  font-size: 24px;
   line-height: 40px;
 }
 
 .footer_social {
-  font-size: 26px;
-  font-family: "AA Bebas Neue";
+  width: 15%;
   letter-spacing: 2px;
   color: white;
-  width: 20%;
+  font-family: "AA Bebas Neue";
+  font-size: 26px;
 }
 
 .footer_social ul {
-  font-size: 24px;
-  color: #666666;
   padding-top: 60px;
+  color: #666666;
+  font-size: 24px;
   line-height: 40px;
 }
 
 .footer_forms {
-  font-size: 26px;
-  font-family: "AA Bebas Neue";
+  width: 35%;
   letter-spacing: 2px;
   color: white;
-  width: 30%;
+  font-family: "AA Bebas Neue";
+  font-size: 26px;
 }
 
-.footer_forms ul {
-  font-size: 24px;
+.footer_forms_locator {
+  position: relative;
+}
+
+.footer_forms_newsletter {
+  position: relative;
+  margin-top: 50px;
+}
+
+.footer_forms input[type="text"] {
+  width: 100%;
+  height: 75px;
+  margin-top: 20px;
+  padding-right: 40%;
+  padding-left: 30px;
+  text-overflow: ellipsis;
   color: #666666;
-  padding-top: 60px;
-  line-height: 40px;
+  border: 0;
+  outline: none;
+  background: #202020;
+  font-family: Lato, sans-serif;
+  font-size: 15px;
+}
+
+.footer_forms input[type="text"]::-webkit-input-placeholder {
+  color: #666666;
+}
+
+.footer_forms input[type="text"]::-moz-placeholder {
+  color: #666666;
+}
+
+.footer_forms input[type="text"]:-ms-input-placeholder {
+  color: #666666;
+}
+
+.footer_forms input[type="text"]::placeholder {
+  color: #666666;
+}
+
+.footer_forms input[type="button"] {
+  position: absolute;
+  top: 55px;
+  right: 10px;
+  width: 30%;
+  height: 55px;
+  cursor: pointer;
+  color: white;
+  border: 0;
+  outline: none;
+  background: #c41735;
+  font-family: Lato, sans-serif;
+  font-size: 15px;
+}
+
+.footer_forms input[type="button"]:active {
+  background: #e01b3c;
 }
 
 .footer_copyring {
   width: 100%;
-  height: 90px;
+  text-align: center;
+  color: #666666;
+  font-family: Lato, sans-serif;
+  font-size: 15px;
+}
+
+.footer_copyring hr {
+  height: 1px;
+  margin-top: 35px;
+  border: 0;
+  background: #2e2e2e;
+}
+
+.footer_copyring p {
+  padding: 30px 0;
 }
 
 /***********************************/
