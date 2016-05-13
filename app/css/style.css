@@ -59,7 +59,7 @@ body {
   /* Opera */
   animation: fadein 2s;
   -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 img {
@@ -70,6 +70,10 @@ div, header, footer, input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+input[type=button], button {
+  padding: 0;
 }
 
 @-webkit-keyframes fadein {
@@ -1253,6 +1257,7 @@ select[data-dkcacheid] {
   cursor: pointer;
   color: white;
   border: 0;
+  -moz-appearance: button;
   outline: none;
   background: #c41735;
   font-family: Lato, sans-serif;
@@ -1265,6 +1270,7 @@ select[data-dkcacheid] {
 
 .footer_copyring {
   width: 100%;
+  margin-bottom: 1px;
   text-align: center;
   color: #666666;
   font-family: Lato, sans-serif;

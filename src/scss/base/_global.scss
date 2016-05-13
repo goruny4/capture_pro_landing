@@ -18,7 +18,7 @@ body{
     animation: fadein 2s;
 
     -webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 img{
@@ -29,6 +29,12 @@ div, header, footer, input{
     box-sizing:border-box;
 }
 
+// firefox fix 'shaking font inside button'
+input[type=button], button{
+    padding: 0;
+}
+
+// fadein BODY animation
 @-moz-keyframes fadein { /* Firefox */
     from {
         opacity:0;
