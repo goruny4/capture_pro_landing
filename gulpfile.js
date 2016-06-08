@@ -27,7 +27,7 @@ gulp.task('watch', ['browser-reload', 'make-sass'], function() {
     gulp.watch('src/scss/**/*.scss', ['make-sass']);
     gulp.watch('src/scss/**/*.css', ['make-sass']);
     gulp.watch('app/*.html', bs.reload);
-    // gulp.watch('app/js/*.js', bs.reload);
+    gulp.watch('app/js/*.js', bs.reload);
 });
 
 gulp.task('default', ['watch']);

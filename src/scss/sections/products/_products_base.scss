@@ -1,7 +1,3 @@
-/***********************************/
-/***** DESKTOP _PRODUCTS BEGIN *******/
-/**********************************/
-
 .products > *{
     position: relative;
 
@@ -19,6 +15,16 @@
 
     &:hover{
         background: $inactive_color;
+    }
+
+    @include media_tablet {
+        height: 420px;
+    }
+
+    @include media_mobile {
+        display: block;
+        width: 100%;
+        height: 500px;
     }
 
 }
@@ -45,7 +51,6 @@
     &_item2,
     &_item3,
     &_item4{
-        position: relative;
 
         & p{
             position: absolute;
@@ -121,35 +126,3 @@
         }
     }
 }
-
-/***********************************/
-/***** DESKTOP _PRODUCTS END *********/
-/**********************************/
-
-/*************************/
-/*** TABLET _PRODUCTS BEGIN ***/
-/*************************/
-
-
-@media only screen
-and (max-width : $tablet_width){
-
-}
-
-
-/*************************/
-/*** TABLET _PRODUCTS END***/
-/*************************/
-
-/*************************/
-/** MOBILE _PRODUCTS BEGIN**/
-/*************************/
-
-@media only screen
-and (max-width : $mobile_width){
-
-}
-
-/*************************/
-/*** MOBILE _PRODUCTS END***/
-/*************************/

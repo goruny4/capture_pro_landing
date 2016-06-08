@@ -14,10 +14,19 @@
 @mixin footer_font_ul{
     padding-top: 60px;
 
-    color: $footer_menu_color;
-
-    font-size: 24px;
+    font-size: 17px;
     line-height: 40px;
+
+    & a:link,
+    & a:active,
+    & a:visited {
+        text-decoration: none;
+
+        color: $footer_menu_color;
+    }
+    & a:hover{
+        color: $active_color;
+    }
 }
 
 
@@ -28,26 +37,19 @@
 }
 
 .footer{
-    // height: 520px;
     padding: 120px 100px 0 100px;
 
     background: #000;
 
     font-size: 0;
 
-    & a:link,
-    & a:active,
-    & a:visited {
-        text-decoration: none;
-
-        color: $footer_menu_color;
-    }
-    & a:hover {
-        color: $active_color;
-    }
-
     &_logo{
         width: 20%;
+
+        @include media_tablet {
+            width: 50%;
+            padding-bottom: 30px;
+        }
 
         & img{
             width: 50%;
@@ -56,6 +58,11 @@
 
     &_legal{
         width: 15%;
+
+        @include media_tablet {
+            width: 50%;
+            padding-bottom: 30px;
+        }
 
         @include footer_font;
 
@@ -67,6 +74,11 @@
     &_help{
         width: 15%;
 
+        @include media_tablet {
+            width: 50%;
+            padding-bottom: 30px;
+        }
+
         @include footer_font;
 
         & ul{
@@ -76,6 +88,11 @@
 
     &_social{
         width: 15%;
+
+        @include media_tablet {
+            width: 50%;
+            padding-bottom: 30px;
+        }
 
         @include footer_font;
 
@@ -88,7 +105,12 @@
         width: 35%;
 
         @include footer_font;
-        // background: red;
+
+        @include media_tablet {
+            width: 100%;
+            padding-bottom: 30px;
+        }
+
 
         &_locator{
             position: relative;
@@ -126,7 +148,7 @@
             right: 10px;
 
             width: 30%;
-            height: 55px;
+            padding: 20px 0;
 
             cursor: pointer;
 
@@ -139,6 +161,10 @@
             font-family: $content_font;
             font-size: 15px;
 
+            @include media_tablet {
+                width: 40%;
+            }
+
             &:active{
                 background: $active_click_color;
             }
@@ -148,7 +174,6 @@
 
     &_copyring{
         width: 100%;
-        // height: 90px;
         margin-bottom: 1px; // hide some little  wierd line in bottom
 
         text-align: center;
@@ -169,36 +194,12 @@
             padding: 30px 0;
         }
     }
-}
+    & a,
+    & h3 {
 
-/***********************************/
-/***** DESKTOP _FOOTER END *********/
-/**********************************/
-
-/*************************/
-/*** TABLET _FOOTER BEGIN ***/
-/*************************/
-
-
-@media only screen
-and (max-width : $tablet_width){
+        @include media_tablet {
+            font-size: 14px;
+        }
+    }
 
 }
-
-
-/*************************/
-/*** TABLET _FOOTER END***/
-/*************************/
-
-/*************************/
-/** MOBILE _FOOTER BEGIN**/
-/*************************/
-
-@media only screen
-and (max-width : $mobile_width){
-
-}
-
-/*************************/
-/*** MOBILE _FOOTER END***/
-/*************************/

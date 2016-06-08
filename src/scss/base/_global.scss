@@ -1,20 +1,4 @@
-$desktop_width: 1200px;
-$tablet_width: 1000px;
-$mobile_width: 400px;
-
-@mixin clearfix {
-    &:after {
-        display: table;
-        clear: both;
-
-        content: "";
-    }
-}
-
-body{
-    -webkit-animation: fadein 2s; /* Safari and Chrome */
-    -moz-animation: fadein 2s; /* Firefox */
-    -o-animation: fadein 2s; /* Opera */
+body {
     animation: fadein 2s;
 
     -webkit-font-smoothing: antialiased;
@@ -22,16 +6,44 @@ body{
 }
 
 img{
-    vertical-align: bottom;
+    vertical-align: top;
 }
 
-div, header, footer, input{
-    box-sizing:border-box;
+div, header, footer, input, button{
+    box-sizing: border-box;
 }
 
 // firefox fix 'shaking font inside button'
 input[type=button], button{
     padding: 0;
+}
+
+body {
+    @include media_mobile {
+        min-width: 385px;
+    }
+}
+
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @include media_tablet {
+        min-width: 320px;
+        max-width: 1000px;
+    }
+}
+
+.clearfix::after {
+    display: table;
+    clear: both;
+
+    content: "";
+}
+
+.row *{
+    display: inline-block;
 }
 
 // fadein BODY animation
@@ -68,58 +80,3 @@ input[type=button], button{
         opacity:1;
     }
 }
-
-
-/************************************/
-/******* DESKTOP _GLOBAL BEGIN ******/
-/************************************/
-
-.row *{
-    display: inline-block;
-    // font-size: 0;
-    // background-color: magenta;
-}
-
-.wrapper{
-    max-width: $desktop_width;
-    // background: red;
-    margin: 0 auto;
-}
-
-/************************************/
-/******* DESKTOP _GLOBAL END ********/
-/************************************/
-
-/****************************/
-/*** TABLET _GLOBAL BEGIN ***/
-/***************************/
-
-@media only screen
-and (max-width : $tablet_width){
-    .wrapper{
-        min-width: 900px;
-        // background: yellow;
-        max-width: 1000px;
-    }
-}
-
-/**************************/
-/*** TABLET _GLOBAL END ***/
-/**************************/
-
-/****************************/
-/*** MOBILE _GLOBAL BEGIN ***/
-/****************************/
-
-@media only screen
-and (max-width : $mobile_width){
-    .wrapper{
-        // background: green;
-        min-width: 400px;
-
-    }
-}
-
-/****************************/
-/*** MOBILE _GLOBAL END   ***/
-/****************************/

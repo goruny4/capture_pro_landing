@@ -3,9 +3,12 @@
 
 
 // BASE
-@import "base/global";
-@import "base/fonts";
+@import "base/medias";
 @import "base/variables";
+@import "base/fonts";
+@import "base/global";
+@import "app/fonts/bebas_neue_web/bebasneue";
+
 
 
 // SECTION >>> _TOP
@@ -14,7 +17,9 @@
 
 // SECTION >>> _SLIDER
 @import "sections/slider/slider_base";
-@import "external/dropkick";
+@import "external/dropdown";
+@import "external/owl.carousel";
+
 
 
 // SECTION >>> _MEDIA

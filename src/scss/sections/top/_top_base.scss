@@ -1,9 +1,6 @@
-/***********************************/
-/***** DESKTOP _TOP BEGIN *********/
-/**********************************/
-
-
-/*====================================*/
+.top{
+    position: relative;
+}
 
 .top_msg{
     padding: 7px 0;
@@ -16,6 +13,10 @@
     font-family: $title_font;
     font-size: 18px;
 
+    @include media_tablet {
+        display: none;
+    }
+
     &_1{
         color: $top_msg_1_color;
     }
@@ -27,14 +28,98 @@
 
 /*====================================*/
 
+.top_menu_button{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+
+    display: none;
+
+    cursor: pointer;
+
+    color: $hr_color2;
+
+    font-family: $title_font;
+    font-size: 30px;
+
+    @include media_tablet {
+        display: block;
+    }
+
+    &:hover{
+        color: $active_color;
+    }
+}
+
+.top_menu_close{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+
+    color: $hr_color2;
+
+    font-size: 30px;
+    cursor: pointer;
+
+    &:hover{
+        color: $active_color;
+    }
+}
+
+.top_menu_mobile{
+    position: fixed;
+    z-index: 200;
+
+    display: none;
+
+    width: 100%;
+    height: 100%;
+
+    background: white;
+
+    & ul{
+        width: 300px;
+        margin: 0 auto;
+        padding-top: 100px;
+
+        text-align: center;
+
+        font-family: $title_font;
+        font-size: 6vw;
+        line-height: 100px;
+
+        & li{
+            & :hover{
+                color: $active_color;
+            }
+        }
+    }
+
+    & a:link,
+    & a:visited,
+    & a:active{
+        text-decoration: none;
+
+        color: $hr_color2;
+    }
+
+}
+
+/*====================================*/
+
 .top_menu_first{
     height: 60px;
+    padding: 0 100px;
 
     word-spacing: 80px;
     text-transform: capitalize;
 
     font-family: $content_font;
     font-size: 14px;
+
+    @include media_tablet {
+        display: none;
+    }
 
     & a:link,
     & a:active,
@@ -43,9 +128,11 @@
 
         color: $top_menu_first_color;
     }
+
     & a:link:hover{
         border-bottom: 2px solid $top_menu_first_color;
     }
+
     & ul{
         float: right;
 
@@ -55,18 +142,21 @@
             word-spacing: 0;
         }
     }
+
     & ul *{
         display: inline-block;
     }
+
 }
 
 /*====================================*/
 
 .top_menu_second{
     height: 90px;
+    padding: 15px 100px 0 100px;
+    margin-bottom: 150px;
 
     letter-spacing: 2px;
-    word-spacing: 100px;
     text-transform: capitalize;
 
     border-top: solid $hr_color 1px;
@@ -75,6 +165,10 @@
     font-family: $title_font;
     font-size: 18px;
 
+    @include media_tablet {
+        display: none;
+    }
+
     & a:link,
     & a:active,
     & a:visited{
@@ -82,62 +176,24 @@
 
         color: $top_menu_second_color;
     }
+
     & a:link:hover{
         border-bottom: 2px solid $top_menu_second_color;
     }
-    & ul :last-child{
-        word-spacing: 0;
-    }
-    & ul *{
-        display: inline-block;
-    }
-    &_center{
-        display: inline-block;
-        float: right;
 
-        width: 75%;
-        padding-top: 40px;
+    & > ul{
+        display: flex;
 
-        text-align: right;
+        align-items: center;
+        justify-content: space-between;
     }
+
     &_logo{
-        display: inline-block;
-
-        padding-top: 15px;
+        margin-right: 10%;
     }
+
     &_logo img{
         height: 55px;
     }
-}
-
-/*********************************/
-/***** DESKTOP _TOP END *********/
-/********************************/
-
-/*************************/
-/*** TABLET _TOP BEGIN ***/
-/*************************/
-
-
-@media only screen
-and (max-width : 800px){
 
 }
-
-
-/*************************/
-/*** TABLET _TOP END   ***/
-/*************************/
-
-/*************************/
-/*** MOBILE _TOP BEGIN ***/
-/*************************/
-
-@media only screen
-and (max-width : 400px){
-
-}
-
-/*************************/
-/*** MOBILE _TOP END   ***/
-/*************************/

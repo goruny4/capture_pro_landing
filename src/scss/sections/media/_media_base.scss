@@ -1,31 +1,24 @@
-/***********************************/
-/***** DESKTOP _SLIDER BEGIN *******/
-/**********************************/
-
 .media{
     height: 560px;
-
-    // background-color: yellow;
 
     &_video{
         float: left;
 
         width: 40%;
         height: 100%;
-        // background: red;
 
         background: url(../img/media/a3.jpg) no-repeat;
         background-position: center;
         background-size: cover;
 
-        &:hover{
-            background:
-                linear-gradient(rgba(255, 255, 255, 0.2),
-                                rgba(255, 255, 255, 0.2)),
-                url(../img/media/a3.jpg) no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
+        // &:hover{
+        //     background:
+        //         linear-gradient(rgba(255, 255, 255, 0.2),
+        //                         rgba(255, 255, 255, 0.2)),
+        //         url(../img/media/a3.jpg) no-repeat;
+        //     background-position: center;
+        //     background-size: cover;
+        // }
     }
     &_img{
         float: left;
@@ -33,98 +26,71 @@
         width: 60%;
         height: 100%;
 
-        background: green;
-
         &_top{
             height: 50%;
-
-            background: red;
 
             &_1{
                 float: left;
 
                 width: 35%;
                 height: 100%;
-                // background: blue;
 
                 background: url(../img/media/action3.jpg) no-repeat;
                 background-position: center;
                 background-size: cover;
+
+                @include media_mobile {
+                    display: none;
+                }
             }
             &_2{
                 float: left;
 
                 width: 65%;
                 height: 100%;
-                // background: gray;
 
                 background: url(../img/media/a2.jpg) no-repeat;
                 background-position: center;
                 background-size: cover;
+
+                @include media_mobile {
+                    width: 100%;
+                }
             }
         }
         &_bottom{
             height: 50%;
 
-            background: yellow;
-
             &_1{
                 float: left;
 
                 width: 65%;
                 height: 100%;
-                // background: red;
 
                 background: url(../img/media/action1.jpg) no-repeat;
                 background-position: center;
                 background-size: cover;
+
+                @include media_mobile {
+                    width: 100%;
+                }
             }
             &_2{
                 float: left;
 
                 width: 35%;
                 height: 100%;
-                // background: yellow;
 
                 background: url(../img/media/action2.jpg) no-repeat;
                 background-position: center;
                 background-size: cover;
+
+                @include media_mobile {
+                    display: none;
+                }
             }
         }
     }
 
 
 }
-
-
-/***********************************/
-/***** DESKTOP _SLIDER END *********/
-/**********************************/
-
-/*************************/
-/*** TABLET _SLIDER BEGIN ***/
-/*************************/
-
-
-@media only screen
-and (max-width : 800px){
-
-}
-
-
-/*************************/
-/*** TABLET _SLIDER END***/
-/*************************/
-
-/*************************/
-/** MOBILE _SLIDER BEGIN**/
-/*************************/
-
-@media only screen
-and (max-width : 400px){
-
-}
-
-/*************************/
-/*** MOBILE _SLIDER END***/
-/*************************/

@@ -1,34 +1,70 @@
-/***********************************/
-/***** DESKTOP _SLIDER BEGIN *******/
-/**********************************/
-
 .slider{
-    // background-color: yellow;
-    height: 880px;
+    // height: 880px;
+    padding-bottom: 70px;
+
+    @include media_tablet {
+        padding-top: 100px;
+    }
+
     & .wrapper{
         height: 100%;
     }
+
     &_img{
         display: inline-block;
         float: left;
         overflow: hidden;
-        // background-color: green;
 
         width: 40%;
         height: inherit;
-        padding: 150px 0 ;
+        padding: 0 0 150px 0;
 
+        @include media_mobile {
+            float: none;
+            width: 100%;
+        }
+
+        &_thumbs > *{
+            display: inline-block;
+        }
+        &_thumbs{
+            text-align: center;
+            vertical-align: middle;
+            font-size: 0;
+            height: 40px;
+            // margin: 0 auto;
+
+            &_item{
+                width: 18%;
+                padding: 5px;
+                transition: width .2s;
+
+                &:hover{
+                    width: 24%;
+                }
+
+                & > img{
+                    width: 100%;
+                }
+            }
+        }
     }
+
     &_desc{
         display: inline-block;
         float: left;
-        // background-color: blue;
 
         width: 60%;
         height: inherit;
-        padding: 150px 100px 0 100px;
+        padding: 0 70px;
 
         font: 22px $title_font;
+
+        @include media_mobile {
+            float: none;
+            width: 100%;
+
+        }
 
         &_first{
             padding-bottom: 5px;
@@ -37,15 +73,30 @@
 
             color: $slider_desc_text_color;
 
-            font-size: 55px;
+            font-size: 45px;
+
+            @include media_tablet {
+                font-size: 24px;
+            }
         }
+
         &_second{
-            letter-spacing: 2px;
-        }
-        &_rating{
-            float: right;
+            padding: 0 70px 10px 0;
 
             letter-spacing: 2px;
+
+            @include media_tablet {
+                font-size: 16px;
+            }
+        }
+
+        &_rating{
+            text-align: right;
+            letter-spacing: 2px;
+
+            @include media_tablet {
+                font-size: 16px;
+            }
         }
         &_text{
             margin-top: 20px;
@@ -55,16 +106,19 @@
 
             font: 16px $content_font;
             line-height: 27px;
+
+            @include media_tablet {
+                font-size: 14px;
+            }
         }
-        &_buttons *{
-            width: 30%;
-            min-width: 125px;
-            height: 60px;
 
-            vertical-align: bottom;
-            letter-spacing: 3px;
+        &_buttons > *{
+            width: 70%;
 
-            line-height: 60px;
+            @include media_mobile {
+                margin: 10px 0;
+                text-align: center;
+            }
         }
 
         &_buttons{
@@ -73,20 +127,101 @@
             text-align: right;
 
             border-bottom: 1px solid $hr_color;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @include media_mobile {
+                flex-direction: column;
+            }
 
             &_price{
-                float: left;
-
                 text-align: left;
 
                 color: $active_color;
 
-                font-size: 40px;
+                font-size: 32px;
+
+                @include media_mobile {
+                    text-align: center;
+                }
             }
 
+            // manual >> https://formstone.it/components/dropdown/
+            &_dropdown{
+                white-space: nowrap;
+                min-width: 120px;
+
+
+                & .fs-dropdown{
+
+                    &-item{
+                        padding: 15px 5px;
+
+                        text-align: center;
+                        letter-spacing: 2px;
+
+                        color: $active_color;
+                        // background: red;
+                        border: 3px solid $active_color;
+                        border-top: 0;
+
+                        font-family: $title_font;
+                        font-size: 22px;
+
+
+                        &:hover{
+                            color: white;
+                            background: $active_color;
+                        }
+
+                        &_selected{
+                            color: $hr_color;
+                            background: white;
+                        }
+                    }
+
+                    &-selected{
+                        padding: 15px 5px;
+
+                        text-align: center;
+                        letter-spacing: 2px;
+
+                        color: $hr_color;
+                        border: 3px solid $hr_color;
+                        outline: none;
+                        background: white;
+
+                        font-family: $title_font;
+                        font-size: 22px;
+
+                        &:hover{
+                            color: white;
+                            border: 3px solid $active_color;
+                            background: $active_color;
+                        }
+                    }
+                    &-options{
+                        border: 0;
+                    }
+                }
+
+                &.fs-dropdown.fs-dropdown-focus{
+                    outline: none;
+                }
+            }
+
+
             &_add{
+                height: 60px;
+                min-width: 120px;
+                overflow: hidden;
+
                 margin-left: 5px;
                 padding-top: 5px;
+
+                white-space: nowrap;
+                text-overflow: ellipsis;
 
                 border: 3px solid $active_color;
                 background-color: white;
@@ -118,6 +253,18 @@
 
             align-items: center;
             justify-content: flex-end;
+
+            @include media_tablet {
+                word-spacing: 0;
+
+                font-size: 16px;
+            }
+
+            & a{
+                @include media_tablet {
+                    zoom: 60%;
+                }
+            }
 
             & :first-child{
                 margin-right: auto;
@@ -171,35 +318,3 @@
 
     background-image: url('../img/star_inactive.png');
 }
-
-/***********************************/
-/***** DESKTOP _SLIDER END *********/
-/**********************************/
-
-/*************************/
-/*** TABLET _SLIDER BEGIN ***/
-/*************************/
-
-
-@media only screen
-and (max-width : 800px){
-
-}
-
-
-/*************************/
-/*** TABLET _SLIDER END***/
-/*************************/
-
-/*************************/
-/** MOBILE _SLIDER BEGIN**/
-/*************************/
-
-@media only screen
-and (max-width : 400px){
-
-}
-
-/*************************/
-/*** MOBILE _SLIDER END***/
-/*************************/

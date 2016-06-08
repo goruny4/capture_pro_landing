@@ -1,0 +1,26 @@
+$extra_width: 5000px; // for FULLHD, 4K, 5K
+$desktop_width: 1200px;
+$tablet_width: 800px;
+$mobile_width: 320px;
+
+@mixin media_desktop{
+    @media only screen
+    and (min-width: #{$desktop_width})
+    and (max-width: #{$extra_width}) {
+        @content;
+    }
+}
+
+@mixin media_tablet{
+    @media only screen
+    and (max-width: #{$desktop_width}) {
+        @content;
+    }
+}
+
+@mixin media_mobile{
+    @media only screen
+    and (max-width: #{$tablet_width}){
+        @content;
+    }
+}
