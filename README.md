@@ -9,14 +9,8 @@
 - GULP
 
 ## Widgets
-- dropkick.js (select menu customization)
-- flexslider.js (image slider)
+- formstone/dropdown.js (select menu customization)
+- owl.carousel.min.js (image slider)
 
 ## Methodology
 - Desktop first
-- BEM (css naming)
-
-## ToDo
-- Mobile adaptation
-- Performance optimization
-- Animation
