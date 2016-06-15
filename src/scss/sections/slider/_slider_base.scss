@@ -238,6 +238,10 @@
                 &:focus{
                     outline: none;
                 }
+
+                @include media_mobile {
+                    margin-left: 0;
+                }
             }
         }
         &_share{

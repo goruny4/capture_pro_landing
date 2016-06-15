@@ -600,6 +600,12 @@ input[type=button], button {
   outline: none;
 }
 
+@media only screen and (max-width: 800px) {
+  .slider_desc_buttons_add {
+    margin-left: 0;
+  }
+}
+
 .slider_desc_share {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1731,6 +1737,7 @@ input[type=button], button {
   text-overflow: ellipsis;
   color: #666666;
   border: 0;
+  -webkit-border-radius: 0;
   outline: none;
   background: #202020;
   font-family: Lato, sans-serif;
@@ -1762,11 +1769,14 @@ input[type=button], button {
   cursor: pointer;
   color: white;
   border: 0;
-  -moz-appearance: button;
+  -webkit-border-radius: 0;
   outline: none;
   background: #c41735;
   font-family: Lato, sans-serif;
   font-size: 15px;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
 }
 
 @media only screen and (max-width: 1200px) {
